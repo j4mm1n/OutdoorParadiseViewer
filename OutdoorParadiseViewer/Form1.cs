@@ -30,7 +30,7 @@ namespace OutdoorParadiseViewer
             selectList.Add(new select() { Text = "SELECT * FROM Employee", Value = "SELECT * FROM Employee" });
             selectList.Add(new select() { Text = "SELECT * FROM Order", Value = "SELECT * FROM Order_" });
             selectList.Add(new select() { Text = "SELECT * FROM Customer", Value = "SELECT * FROM Customer" });
-            selectList.Add(new select() { Text = "PChin View", Value = "SELECT * FROM Customer" });
+            selectList.Add(new select() { Text = "PChin View", Value = "Not yet ...." });
             comboBox1.DataSource = selectList;
             comboBox1.DisplayMember = "Text";
         }
