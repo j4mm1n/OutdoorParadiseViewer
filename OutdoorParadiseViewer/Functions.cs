@@ -55,6 +55,27 @@ namespace OutdoorParadiseViewer
                 MessageBox.Show(exception.ToString());
             }
         }
-    
+
+        static public void loadDataComboBox(ComboBox cmb, String paramSQLCommand, SqlConnection paramConnection)
+        {            
+            SqlCommand ExecuteSQL = new SqlCommand(paramSQLCommand, paramConnection);
+            Debug.WriteLine("SQL Query: " + paramSQLCommand);
+
+            SqlDataReader reader;
+            reader = ExecuteSQL.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("", typeof(string));
+            dt.Columns.Add("contactname", typeof(string));
+            dt.Load(reader);
+
+            cmb.ValueMember = "id";
+            cmb.DisplayMember = "Name";
+            cmb.DataSource = dt;
+
+
+        }
+
+
     }
 }

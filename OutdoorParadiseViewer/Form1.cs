@@ -17,7 +17,7 @@ namespace OutdoorParadiseViewer
         static private SqlConnection connectionPChin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=PChin;Password=123;MultipleActiveResultSets=true");
         static private SqlConnection connectionTestManager = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=TestManager;Password=123;MultipleActiveResultSets=true");
         static private SqlConnection connectionTestHRM = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=TestHRM;Password=123;MultipleActiveResultSets=true");
-        static private SqlConnection connectionAdmin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=OP;Password=123;MultipleActiveResultSets=true");
+        static public SqlConnection connectionAdmin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=OP;Password=123;MultipleActiveResultSets=true");
         static private SqlConnection currentConnection;
 
         public Form1()

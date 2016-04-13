@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace OutdoorParadiseViewer
 {
     public partial class Form2 : Form
@@ -21,9 +22,7 @@ namespace OutdoorParadiseViewer
 
         private void populateComboBox1()
         {
-            this.comboBoxConsumer.DisplayMember = "FullName";
-            this.comboBoxConsumer.ValueMember = "your field";
-            this.comboBoxConsumer.DataSource = OutdoorParadiseDataSet.Tables["tEmployee"];
+            Functions.loadDataComboBox(this.comboBoxConsumer, "", Form1.connectionAdmin);
         }
 
         private void populateComboBox2()
@@ -32,6 +31,11 @@ namespace OutdoorParadiseViewer
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }
