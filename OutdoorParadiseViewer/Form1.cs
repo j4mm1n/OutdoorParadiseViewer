@@ -128,8 +128,19 @@ namespace OutdoorParadiseViewer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            checkConnection();
-            Functions.Connect(connectionAdmin);
+            if(currentConnection != null)
+            {
+                Functions.Disconnect();
+            }
+            if (Functions.Connect(connectionAdmin))
+            {
+                labelStatus.Text = "Status: Connected as Admin!";
+                currentConnection = connectionAdmin;
+            }
+            else
+            {
+                labelStatus.Text = "Status: Connection Failed.";
+            }
             Form2 TripForm = new Form2();
             TripForm.Show();
         }
