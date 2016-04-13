@@ -103,7 +103,7 @@
             // 
             this.tBQuery.Location = new System.Drawing.Point(472, 510);
             this.tBQuery.Name = "tBQuery";
-            this.tBQuery.Size = new System.Drawing.Size(346, 20);
+            this.tBQuery.Size = new System.Drawing.Size(321, 20);
             this.tBQuery.TabIndex = 7;
             // 
             // comboBox1
@@ -161,9 +161,9 @@
             // btnExecute
             // 
             this.btnExecute.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecute.Location = new System.Drawing.Point(824, 507);
+            this.btnExecute.Location = new System.Drawing.Point(800, 498);
             this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(57, 23);
+            this.btnExecute.Size = new System.Drawing.Size(82, 23);
             this.btnExecute.TabIndex = 13;
             this.btnExecute.Text = "Execute";
             this.btnExecute.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             // btnTrip
             // 
             this.btnTrip.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrip.Location = new System.Drawing.Point(799, 536);
+            this.btnTrip.Location = new System.Drawing.Point(799, 527);
             this.btnTrip.Name = "btnTrip";
             this.btnTrip.Size = new System.Drawing.Size(82, 23);
             this.btnTrip.TabIndex = 15;
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 563);
+            this.ClientSize = new System.Drawing.Size(894, 554);
             this.Controls.Add(this.btnTrip);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnExecute);

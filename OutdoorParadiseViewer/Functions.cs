@@ -56,8 +56,26 @@ namespace OutdoorParadiseViewer
             }
         }
 
-        static public void loadDataComboBox(ComboBox cmb, String paramSQLCommand, SqlConnection paramConnection)
-        {            
+        internal static void InsertTrip(String paramConsumer, String paramTrip, Boolean paramExcursion, SqlConnection paramConnection)
+        {
+            try
+            {
+                SqlCommand InsertTrip = new SqlCommand("INSERT INTO Trip_order VALUES(@Consumer, @Trip, @Excursion)", paramConnection);
+                InsertTrip.Parameters.AddWithValue("@Consumer", paramConsumer);
+                InsertTrip.Parameters.AddWithValue("@Trip", paramTrip);
+                InsertTrip.Parameters.AddWithValue("@Excursion", paramExcursion);
+
+                InsertTrip.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+        }
+
+        static public void loadDataComboBox(ComboBox cmb, String paramSQLCommand, SqlConnection paramConnection, String paramValueMember, String paramDisplayMember)
+        {
+            try { 
             SqlCommand ExecuteSQL = new SqlCommand(paramSQLCommand, paramConnection);
             Debug.WriteLine("SQL Query: " + paramSQLCommand);
 
@@ -69,10 +87,14 @@ namespace OutdoorParadiseViewer
             dt.Columns.Add("contactname", typeof(string));
             dt.Load(reader);
 
-            cmb.ValueMember = "id";
-            cmb.DisplayMember = "Name";
+            cmb.ValueMember = paramValueMember;
+            cmb.DisplayMember = paramDisplayMember;
             cmb.DataSource = dt;
-
+            }
+            catch(Exception e)
+            {
+                Debug.Write(e);
+            }
 
         }
 

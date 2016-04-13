@@ -17,8 +17,8 @@ namespace OutdoorParadiseViewer
         static private SqlConnection connectionPChin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=PChin;Password=123;MultipleActiveResultSets=true");
         static private SqlConnection connectionTestManager = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=TestManager;Password=123;MultipleActiveResultSets=true");
         static private SqlConnection connectionTestHRM = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=TestHRM;Password=123;MultipleActiveResultSets=true");
-        static public SqlConnection connectionAdmin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=OP;Password=123;MultipleActiveResultSets=true");
-        static private SqlConnection currentConnection;
+        static private SqlConnection connectionAdmin = new SqlConnection(@"Data Source=localhost\SambaPOS3;Initial Catalog=OutdoorParadise;User ID=OP;Password=123;MultipleActiveResultSets=true");
+        static public SqlConnection currentConnection;
 
         public Form1()
         {
@@ -32,6 +32,8 @@ namespace OutdoorParadiseViewer
             selectList.Add(new select() { Text = "SELECT * FROM Customer", Value = "SELECT * FROM Customer" });
             selectList.Add(new select() { Text = "PChin View", Value = "SELECT * FROM EmployeeMe" });
             selectList.Add(new select() { Text = "TestManager View", Value = "SELECT* FROM EmployeeTeam" });
+            selectList.Add(new select() { Text = "SELECT * FROM Trip_order", Value = "SELECT* FROM Trip_order" });
+            
 
             comboBox1.DataSource = selectList;
             comboBox1.DisplayMember = "Text";
@@ -126,7 +128,10 @@ namespace OutdoorParadiseViewer
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            checkConnection();
+            Functions.Connect(connectionAdmin);
+            Form2 TripForm = new Form2();
+            TripForm.Show();
         }
     }
 
