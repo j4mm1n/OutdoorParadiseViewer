@@ -30,7 +30,9 @@ namespace OutdoorParadiseViewer
             selectList.Add(new select() { Text = "SELECT * FROM Employee", Value = "SELECT * FROM Employee" });
             selectList.Add(new select() { Text = "SELECT * FROM Order", Value = "SELECT * FROM Order_" });
             selectList.Add(new select() { Text = "SELECT * FROM Customer", Value = "SELECT * FROM Customer" });
-            selectList.Add(new select() { Text = "PChin View", Value = "Not yet ...." });
+            selectList.Add(new select() { Text = "PChin View", Value = "SELECT * FROM EmployeeMe" });
+            selectList.Add(new select() { Text = "TestManager View", Value = "SELECT* FROM EmployeeTeam" });
+
             comboBox1.DataSource = selectList;
             comboBox1.DisplayMember = "Text";
         }
@@ -110,6 +112,21 @@ namespace OutdoorParadiseViewer
                 labelStatus.Text = "Closing connection";
                 Functions.Disconnect();
             }
+        }
+
+        private void btnPChin_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

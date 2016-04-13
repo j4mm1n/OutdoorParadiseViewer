@@ -43,6 +43,7 @@
             this.btnPChin = new System.Windows.Forms.Button();
             this.btnExecute = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnTrip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outdoorParadiseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outdoorParadiseDataSet)).BeginInit();
@@ -160,7 +161,7 @@
             // btnExecute
             // 
             this.btnExecute.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecute.Location = new System.Drawing.Point(826, 508);
+            this.btnExecute.Location = new System.Drawing.Point(824, 507);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(57, 23);
             this.btnExecute.TabIndex = 13;
@@ -179,11 +180,23 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
+            // btnTrip
+            // 
+            this.btnTrip.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrip.Location = new System.Drawing.Point(799, 536);
+            this.btnTrip.Name = "btnTrip";
+            this.btnTrip.Size = new System.Drawing.Size(82, 23);
+            this.btnTrip.TabIndex = 15;
+            this.btnTrip.Text = "Book Trip";
+            this.btnTrip.UseVisualStyleBackColor = true;
+            this.btnTrip.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 545);
+            this.ClientSize = new System.Drawing.Size(894, 563);
+            this.Controls.Add(this.btnTrip);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnExecute);
             this.Controls.Add(this.btnPChin);
@@ -222,6 +235,7 @@
         private System.Windows.Forms.Button btnPChin;
         private System.Windows.Forms.Button btnExecute;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnTrip;
     }
 }
 
